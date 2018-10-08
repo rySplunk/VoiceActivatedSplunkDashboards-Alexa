@@ -1,0 +1,241 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "splunk",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "OneDriveFileCountIntent",
+                    "slots": [
+                        {
+                            "name": "timeperiod",
+                            "type": "TIME_PERIOD"
+                        },
+                        {
+                            "name": "firstname",
+                            "type": "FIRST_NAME"
+                        },
+                        {
+                            "name": "lastname",
+                            "type": "LAST_NAME"
+                        }
+                    ],
+                    "samples": [
+                        "how many files {firstname} {lastname} has accessed {timeperiod}",
+                        "how many files has {firstname} {lastname} accessed {timeperiod}"
+                    ]
+                },
+                {
+                    "name": "OneDriveLocationIntent",
+                    "slots": [
+                        {
+                            "name": "timeperiod",
+                            "type": "TIME_PERIOD"
+                        },
+                        {
+                            "name": "firstname",
+                            "type": "FIRST_NAME"
+                        },
+                        {
+                            "name": "lastname",
+                            "type": "LAST_NAME"
+                        }
+                    ],
+                    "samples": [
+                        "where {firstname} {lastname} has accessed files from {timeperiod}",
+                        "where has {firstname} {lastname} accessed files from {timeperiod}"
+                    ]
+                },
+                {
+                    "name": "OneDriveAvgIntent",
+                    "slots": [
+                        {
+                            "name": "timeperiod",
+                            "type": "TIME_PERIOD"
+                        },
+                        {
+                            "name": "firstname",
+                            "type": "FIRST_NAME"
+                        },
+                        {
+                            "name": "lastname",
+                            "type": "LAST_NAME"
+                        }
+                    ],
+                    "samples": [
+                        "how many files {firstname} {lastname} accesses on average per day",
+                        "on average how many files does {firstname} {lastname} access per day",
+                        "what is the average number of files {firstname} {lastname} accesses per day"
+                    ]
+                },
+                {
+                    "name": "UserPhysicalLocationIntent",
+                    "slots": [
+                        {
+                            "name": "timeperiod",
+                            "type": "TIME_PERIOD"
+                        },
+                        {
+                            "name": "firstname",
+                            "type": "FIRST_NAME"
+                        },
+                        {
+                            "name": "lastname",
+                            "type": "LAST_NAME"
+                        }
+                    ],
+                    "samples": [
+                        "if {firstname} {lastname} is in the office {timeperiod}"
+                    ]
+                },
+                {
+                    "name": "PlayASound",
+                    "slots": [],
+                    "samples": [
+                        "to predict what andi thinks of my shoes",
+                        "what does andi think of my beard"
+                    ]
+                },
+                {
+                    "name": "ShowOneDriveAccessIntent",
+                    "slots": [],
+                    "samples": [
+                        "to show me one drive file access today"
+                    ]
+                },
+                {
+                    "name": "FinishedIntent",
+                    "slots": [],
+                    "samples": [
+                        "to clear my dashboard",
+                        "I'm finished"
+                    ]
+                },
+                {
+                    "name": "PhantomIntent",
+                    "slots": [],
+                    "samples": [
+                        "to show me phantom cyber",
+                        "to show my phantom automation",
+                        "to show me phantom"
+                    ]
+                },
+                {
+                    "name": "WhoIsIntent",
+                    "slots": [],
+                    "samples": [
+                        "who is mark jackson"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "TIME_PERIOD",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "last week"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "yesterday"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "today"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SERVER_NAME",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "ip-172-31-3-95"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "zoo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "goo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "foo"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SEARCH_COMMAND_NAME",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "sum"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "accum"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "stats"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FIRST_NAME",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "tina"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "alex"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LAST_NAME",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "sharma"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "burger"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
